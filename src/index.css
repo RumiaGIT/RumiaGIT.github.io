@@ -1,0 +1,67 @@
+/* Basic CSS */
+a:hover {
+    text-decoration: none;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+body {
+    background-color: #FCFCFC;
+    color: #727272;
+}
+
+.Duck {
+    width: 250px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #CCCCCC;
+}
+
+.Images > img {
+    width: 180px;
+    margin-right: 10px;
+    transition: transform 0.25s ease;
+    cursor: pointer;
+}
+
+.Images > img:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.Intro {
+    word-wrap: break-word;
+    width: 250px;
+}
+
+.Profile {
+    font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    position: absolute;
+    margin-right: 800px;
+}
+
+.ProfileFixedFix {
+    position: fixed;
+}
+
+.Projects {
+    margin-left: 500px;
+    word-wrap: break-word;
+    width: 650px;
+    font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1, h2, h3 {
+    color: #000;
+}
+
+/* Lightbox-specific CSS */
+.yarl__container {
+    background-color: rgba(0, 0, 0, .8);
+}

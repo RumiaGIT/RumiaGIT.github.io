@@ -1,10 +1,25 @@
 /* Basic CSS */
+@media (min-width:992px) {
+    .ProfileFixedFix {
+        position: fixed !important;
+    }
+
+    .Profile {
+        margin-right: 75px;
+    }
+}
+
+.Avatar {
+    width: 250px;
+}
+
 a:hover {
     text-decoration: none;
 }
 
 .App {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -13,10 +28,6 @@ a:hover {
 body {
     background-color: #FCFCFC;
     color: #727272;
-}
-
-.Duck {
-    width: 250px;
 }
 
 hr {
@@ -43,16 +54,12 @@ hr {
 
 .Profile {
     font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    position: absolute;
-    margin-right: 800px;
-}
-
-.ProfileFixedFix {
-    position: fixed;
+    width: 250px;
+    float: left;
 }
 
 .Projects {
-    margin-left: 500px;
+    display: block;
     word-wrap: break-word;
     width: 650px;
     font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;

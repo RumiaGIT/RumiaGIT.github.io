@@ -5,7 +5,7 @@ export default function Profile() {
         <div className="Profile">
             <div className="ProfileFixedFix">
                 <h1>Ronnie van Meel</h1>
-                <img src={profile} className="Duck" />
+                <img src={profile} className="Avatar" />
                 <p className="Intro">
                     Junior Data Scientist with an interest in Machine Learning, AI, Deep Learning, and more. 
                     Practicing calisthenics and keeping data of a long fitness journey.

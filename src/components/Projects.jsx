@@ -2,6 +2,10 @@ import React from 'react'
 import Lightbox from "yet-another-react-lightbox"
 import "yet-another-react-lightbox/styles.css";
 
+import sts_ascensionstats from "../images/sts_ascensionstats.png"
+import sts_featureimportance from "../images/sts_featureimportance.png"
+import sts_rocauc from "../images/sts_rocauc.png"
+
 import nlp_dashboard from "../images/nlp_dashboard.png"
 import nlp_choropleth from "../images/nlp_choropleth.png"
 import nlp_lossplot from "../images/nlp_lossplot.png"
@@ -21,6 +25,7 @@ import poe_model from "../images/poe_model.png"
 import poe_thumb1 from "../images/poe_thumb1.png"
 
 export default function Projects() {
+    const [openSTS, setOpenSTS] = React.useState(-1);
     const [openNLP, setOpenNLP] = React.useState(-1);
     const [openYOLO, setOpenYOLO] = React.useState(-1);
     const [openPOE, setOpenPOE] = React.useState(-1);
@@ -29,7 +34,40 @@ export default function Projects() {
         <div className="Projects">
             <h2>Selected Projects in Data Science and Machine Learning</h2>
             <hr />
-            {/* Project 1: NLP Hate Speech Classification */}
+            {/* Project 1: Slay the Spire Run Outcome Classification*/}
+            <div className="Project">
+                <h3>Slay the Spire Run Outcome Classification</h3>
+                <p>
+                    A project about the video game Slay the Spire, using large quantities of data about its many game elements to classify and predict whether a player is likely to beat the game.
+                    All the game's contents, such as gold, relics, cards, enemies, classes, etc., are analyzed and utilized during modelling in various ways.
+                </p>
+                <p>Key Achievements:</p>
+                <ul>
+                    <li>Merged, cleaned, and prepared 2 million runs worth of data</li>
+                    <li>Tested 3 different models with different feature configurations to evaluate modelling efficacy</li>
+                    <li>Achieved model accuracy percentages of up to 98% after iterative improvements</li>
+                </ul>
+                <p>Images (click to enlarge):</p>
+                <div className="Images">
+                    <img src={sts_ascensionstats} onClick={() => setOpenSTS(0)} />
+                    <img src={sts_featureimportance} onClick={() => setOpenSTS(1)} />
+                    <img src={sts_rocauc} onClick={() => setOpenSTS(2)} />
+                </div>
+                <Lightbox 
+                    open={openSTS >= 0}
+                    index={openSTS}
+                    close={() => setOpenSTS(-1)}
+                    slides={[
+                        {src: sts_ascensionstats},
+                        {src: sts_featureimportance},
+                        {src: sts_rocauc}
+                    ]}
+                    controller={{closeOnBackdropClick: true}}
+                />
+                <a href="https://github.com/RumiaGIT/sts-outcome-classification">View GitHub Repository</a>
+            </div>
+            <hr />
+            {/* Project 2: NLP Hate Speech Classification */}
             <div className="Project">
                 <h3>NLP Hate Speech Classification</h3>
                 <p>
@@ -62,7 +100,7 @@ export default function Projects() {
                 <a href="https://github.com/RumiaGIT/hate-speech-classification">View GitHub Repository</a>
             </div>
             <hr />
-            {/* Project 2: YOLO Gesture Detection */}
+            {/* Project 3: YOLO Gesture Detection */}
             <div className="Project">
                 <h3>YOLO Gesture Detection</h3>
                 <p>
@@ -72,7 +110,7 @@ export default function Projects() {
                 <p>Key Achievements:</p>
                 <ul>
                     <li>Trained a YOLOv5 model on a custom hand gesture dataset</li>
-                    <li>Performed live detection using opencv</li>
+                    <li>Performed hand gesture live detection using opencv</li>
                 </ul>
                 <p>Images (click to enlarge):</p>
                 <div className="Images">
@@ -94,7 +132,7 @@ export default function Projects() {
                 <a href="https://github.com/RumiaGIT/yolo-gesture-detection">View GitHub Repository</a>
             </div>
             <hr />
-            {/* Project 3: Path of Exile Item Image Classification */}
+            {/* Project 4: Path of Exile Item Image Classification */}
             <div className="Project">
                 <h3>Path of Exile Item Image Classification</h3>
                 <p>
